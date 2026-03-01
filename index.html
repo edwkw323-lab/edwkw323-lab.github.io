@@ -78,9 +78,9 @@ a {
 }
 
 .footer {
-  font-size: 18px;
-  font-weight: 400;
-  margin-top: 200px;
+    font-size: 90px;
+    font-weight: 900;
+    margin-top: 200px;
 }
 </style>
 </head>
@@ -89,24 +89,30 @@ a {
 
 <div class="content">
 
-<h1 onclick="openWork()">
-08—&lt;THE HILL&gt;///
-</h1>
-
-<h1>
-09—&lt;FUNERAL&gt;///
-</h1>
-
-<h1>
-10—&lt;CLIMAX&gt;///
-</h1>
+<h1 onclick="openWork(1)">01—&lt;WALKING THE DOG&gt;///</h1>
+<h1 onclick="openWork(2)">02—&lt;THE GREAT PAIN UNDER HEAVEN&gt;///</h1>
+<h1 onclick="openWork(3)">03—&lt;KOWTOW&gt;///</h1>
+<h1 onclick="openWork(4)">04—&lt;THE PHYSICAL IMPOSSIBILITY OF DEATH IN THE MIND OF SOMEONE LIVING&gt;///</h1>
+<h1 onclick="openWork(5)">05—&lt;RAINFALL&gt;///</h1>
+<h1 onclick="openWork(6)">06—&lt;THE WEIGHT OF DIMENSIONS&gt;///</h1>
+<h1 onclick="openWork(7)">07—&lt;RAISING FISH&gt;///</h1>
+<h1 onclick="openWork(8)">08—&lt;THE HILL&gt;///</h1>
+<h1 onclick="openWork(9)">09—&lt;FUNERAL&gt;///</h1>
+<h1 onclick="openWork(10)">10—&lt;CLIMAX&gt;///</h1>
+<h1 onclick="openWork(11)">11—&lt;LINEAGE&gt;///</h1>
+<h1 onclick="openWork(12)">12—&lt;SCHWEIGEN&gt;///</h1>
+<h1 onclick="openWork(13)">13—&lt;SLEEP&gt;///</h1>
+<h1 onclick="openWork(14)">14—&lt;ROUND TABLE CONFERENCE&gt;///</h1>
+<h1 onclick="openWork(15)">15—&lt;BARRIER-FREE PATH&gt;///</h1>
+<h1 onclick="openWork(16)">16—&lt;DAS HOLZ&gt;///</h1>
+<h1 onclick="openWork(17)">17—&lt;TOOTHBRUSH&gt;///</h1>
+<h1 onclick="openWork(18)">18—&lt;DANCING&gt;///</h1>
 
 <div class="footer">
 ALL RIGHTS REVERSED — ‘E. WHITE—2026’
 </div>
 
 </div>
-
 
 <!-- 左图层 -->
 <div class="work-panel" id="work1">
@@ -145,23 +151,21 @@ can no longer be stitched back together.
 
 
 <script>
-function openWork() {
-    document.getElementById("work1").classList.add("active");
-    document.body.style.overflow = "hidden";
+function openWork(n) {
+    document.getElementById("work" + n).classList.add("active");
 }
 
-function closeWork() {
-    document.getElementById("work1").classList.remove("active");
-    document.getElementById("text1").classList.remove("active");
-    document.body.style.overflow = "auto";
+function closeWork(n) {
+    document.getElementById("work" + n).classList.remove("active");
+    document.getElementById("text" + n).classList.remove("active");
 }
 
-function openText() {
-    document.getElementById("text1").classList.add("active");
+function openText(n) {
+    document.getElementById("text" + n).classList.add("active");
 }
 
-function closeText() {
-    document.getElementById("text1").classList.remove("active");
+function closeText(n) {
+    document.getElementById("text" + n).classList.remove("active");
 }
 </script>
 
