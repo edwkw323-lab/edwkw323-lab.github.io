@@ -695,6 +695,9 @@ document.getElementById("overlay").style.display="none"
 
 document.querySelector(".right").style.display="none"
 
+let media=document.getElementById("media")
+media.innerHTML=""
+
 clearInterval(timer)
 
 }
@@ -727,6 +730,8 @@ document.addEventListener("keydown", function(event){
 
 if(event.key === "Escape"){
 closeWork()
+document.getElementById("overlay").style.display="none"
+document.getElementById("media").innerHTML=""
 }
 
 })
