@@ -102,6 +102,30 @@ padding:80px;
 line-height:1.6;
 display:none;
 overflow:auto;
+position:relative;
+}
+
+.about-close{
+position:absolute;
+top:30px;
+right:40px;
+cursor:pointer;
+font-size:14px;
+}
+  
+.row{
+display:flex;
+margin-bottom:40px;
+}
+
+.leftcol{
+width:40%;
+font-weight:600;
+}
+
+.rightcol{
+width:60%;
+line-height:1.6;
 }
 
   
@@ -230,27 +254,49 @@ E. White 2026
   
 <div class="about" id="about">
 
-<b>Siyuan Li / E. White</b><br>
+<span class="about-close" onclick="openAbout()">Close</span>
+
+<div class="row">
+<div class="leftcol">
+Siyuan Li / E. White<br>
 A complete idiot<br>
 Performance. Installation. Writing.<br><br>
 
 edwkw323@gmail.com<br>
-Instagram: c22h23cln2o2_<br><br>
+Instagram: c22h23cln2o2_
+</div>
 
-<b>Education</b><br>
-China Academy of Art<br>
+<div class="rightcol">
+White is an artist working across performance, installation, and writing.<br><br>
+
+His practice examines silence, social indifference, structures of authority, and the instability of language.<br><br>
+
+He constructs situations in which the familiar becomes estranged, and interaction reveals its underlying absurdity.
+</div>
+</div>
+
+<div class="row">
+<div class="leftcol">Education</div>
+
+<div class="rightcol">
+<b>China Academy of Art</b><br>
 2019–2023<br><br>
 
-Akademie der Bildenden Künste München<br>
-2024–Now<br><br>
+<b>Akademie der Bildenden Künste München</b><br>
+2024–Now
+</div>
+</div>
 
-<b>Condition</b><br>
+<div class="row">
+<div class="leftcol">Condition</div>
+
+<div class="rightcol">
 ALIVE<br>
 FUNCTIONING<br>
 OBSERVING<br>
-NOT COMPLYING<br><br>
-
-<span class="close" onclick="openAbout()">Close</span>
+NOT COMPLYING
+</div>
+</div>
 
 </div>
 
