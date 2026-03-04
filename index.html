@@ -53,7 +53,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:#111;
+background:black;
 display:none;
 }
 
@@ -202,9 +202,9 @@ E. White 2026
 
 
 
-<div class="overlay" id="overlay">
+<div class="overlay" id="overlay" onclick="closeWork()">
 
-<div class="overlay-content">
+<div class="overlay-content" onclick="event.stopPropagation()">
 
 <div class="left">
 
@@ -626,6 +626,13 @@ a.style.display="block"
 }
 
 }
+document.addEventListener("keydown", function(event){
+
+if(event.key === "Escape"){
+closeWork()
+}
+
+})
 
 </script>
 
