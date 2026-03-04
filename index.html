@@ -350,7 +350,7 @@ with a stranger of their own kind.`
 
 2:{
 title:"The Great Pain Under Heaven (2025) Video",
-images:["https://www.youtube.com/embed/qJOPg2TJICQ","images/02-1.jpeg","images/02-2.jpeg","images/02-3.jpeg"],
+images:["videos/02.mov","images/02-1.jpeg","images/02-2.jpeg","images/02-3.jpeg"],
 text:`This work is a stop-motion animation based on a physical performance I created with my own body. Its title, “The Great Pain Under Heaven”, is a wordplay on a well-known phrase from classical Chinese philosophy: “The Great Harmony Under Heaven” (tian xia da tong / 天 下大同). That original phrase envisions an ideal society with equality, justice, no class division, and no private desire — a collective utopia from the Confucian canon Book of Rites.
 
 By replacing just one character — turning 同 (togetherness) into 痛 (pain) — the meaning shifts completely. “The Great Harmony” becomes “The Great Pain.” This subtle change reflects the dissonance I feel between cultural ideals and lived reality: we appear to live in a peaceful, developed world, but beneath the surface, structural pain — war, injustice, anxiety, oppression — quietly persists. It is not dramatic or explosive pain, but constant, suppressed,  and everywhere.
@@ -664,6 +664,17 @@ allow="autoplay; encrypted-media"
 allowfullscreen
 style="width:90%; height:60vh;">
 </iframe>
+`
+
+}else if(file.endsWith(".mp4") || file.endsWith(".mov")){
+
+media.innerHTML = `
+<video
+src="${file}"
+controls
+autoplay
+style="max-width:90%;max-height:80vh;">
+</video>
 `
 
 }else{
