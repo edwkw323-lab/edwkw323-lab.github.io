@@ -15,11 +15,11 @@ color:#d9d9d9;
 }
 
 .container{
-padding:60px;
+padding:70px;
 }
 
 .project{
-font-size:60px;
+font-size:90px;
 line-height:1.05;
 cursor:pointer;
 margin-bottom:40px;
@@ -456,50 +456,68 @@ text:`Let's dance along with the wind.`
 
 
 
-let slideIndex=0;
-let timer;
+let slideIndex=0
+let timer
+let current
 
 function openWork(id){
 
-let work=works[id];
+current=works[id]
 
-document.getElementById("overlay").style.display="block";
+document.getElementById("overlay").style.display="block"
 
-document.getElementById("title").innerText=work.title;
+document.getElementById("metaTitle").innerText=current.title
+document.getElementById("metaYear").innerText=current.year
+document.getElementById("text").innerText=current.text
 
-document.getElementById("text").innerText=work.text;
+slideIndex=0
 
-slideIndex=0;
-
-showSlide(work);
+showSlide()
 
 timer=setInterval(()=>{
-
-slideIndex++;
-
-if(slideIndex>=work.images.length){
-
-slideIndex=0;
+slideIndex++
+if(slideIndex>=current.images.length){slideIndex=0}
+showSlide()
+},3000)
 
 }
 
-showSlide(work);
+function showSlide(){
 
-},3000);
-
-}
-
-function showSlide(work){
-
-document.getElementById("slide").src=work.images[slideIndex];
+document.getElementById("slide").src=current.images[slideIndex]
 
 }
 
 function closeWork(){
 
-document.getElementById("overlay").style.display="none";
+document.getElementById("overlay").style.display="none"
+document.getElementById("text").style.display="none"
 
-clearInterval(timer);
+clearInterval(timer)
+
+}
+
+function toggleText(){
+
+let t=document.getElementById("text")
+
+if(t.style.display==="none"){
+t.style.display="block"
+}else{
+t.style.display="none"
+}
+
+}
+
+function openAbout(){
+
+let a=document.getElementById("about")
+
+if(a.style.display==="block"){
+a.style.display="none"
+}else{
+a.style.display="block"
+}
 
 }
 
