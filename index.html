@@ -2,48 +2,37 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Siyuan Li</title>
+<title>E. White</title>
 
 <style>
 
 body{
 margin:0;
-background:#0a0aff;
-color:white;
-font-family:Helvetica, Arial, sans-serif;
+background:#1e19ff;
+font-family:Helvetica,Arial,sans-serif;
+font-weight:700;
+color:#d9d9d9;
 }
 
 .container{
-padding:70px;
+padding:60px;
 }
 
-.name{
-font-size:90px;
-font-weight:bold;
+.project{
+font-size:60px;
+line-height:1.05;
 cursor:pointer;
+margin-bottom:40px;
 }
 
-.blocks{
-font-size:50px;
-margin:20px 0 50px 0;
-}
-
-.work{
-font-size:75px;
-font-weight:bold;
-cursor:pointer;
-line-height:1.15;
-}
-
-.number{
+.project span.num{
 display:inline-block;
-width:90px;
+width:120px;
 }
 
 .footer{
-font-size:85px;
 margin-top:120px;
-font-weight:bold;
+font-size:72px;
 }
 
 .overlay{
@@ -57,56 +46,20 @@ display:none;
 }
 
 .overlay-content{
-display:flex;
-height:100%;
-}
-
-.left{
-width:50%;
-padding:60px;
-}
-
-.right{
-width:50%;
-padding:80px;
-overflow:auto;
-display:none;
-}
-
-.left img{
-max-width:100%;
-max-height:70vh;
-}
-
-.meta{
-margin-top:20px;
-}
-
-.more{
-cursor:pointer;
-margin-right:20px;
-}
-
-.close{
-cursor:pointer;
-}
-
-.about{
-position:fixed;
+position:absolute;
 right:0;
 top:0;
-width:40%;
+width:420px;
 height:100%;
+overflow-y:auto;
+padding:40px;
 background:#111;
-padding:60px;
-display:none;
-overflow:auto;
+color:#ccc;
 }
-
+  
 </style>
 
 </head>
-
 
 <body>
 
@@ -116,85 +69,34 @@ overflow:auto;
 
 <div class="blocks">■ ■ ■ ■ ■ ■ ■ ■ ■ ■</div>
 
-<div class="work" onclick="openWork(1)">
-<span class="number">01 —</span> &lt;WALKING THE DOG&gt; ///
-</div>
-
-<div class="work" onclick="openWork(2)">
-<span class="number">02 —</span> &lt;THE GREAT PAIN UNDER HEAVEN&gt; ///
-</div>
-
-<div class="work" onclick="openWork(3)">
-<span class="number">03 —</span> &lt;KOWTOW&gt; ///
-</div>
-
+<div class="work" onclick="openWork(1)">01 — &lt;WALKING THE DOG&gt;\\\</div>
+<div class="work" onclick="openWork(2)">02 — &lt;THE GREAT PAIN UNDER HEAVEN&gt;\\\</div>
+<div class="work" onclick="openWork(3)">03 — &lt;KOWTOW&gt;\\\</div>
 <div class="work" onclick="openWork(4)">
-<span class="number">04 —</span> &lt;THE PHYSICAL IMPOSSIBILITY OF DEATH<br>
-IN THE MIND OF SOMEONE LIVING&gt; ///<br>
+04—&lt;THE PHYSICAL IMPOSSIBILITY OF DEATH IN THE MIND OF SOMEONE LIVING&gt;///<br>
 (LOW-BUDGET VERSION)
 </div>
-
-<div class="work" onclick="openWork(5)">
-<span class="number">05 —</span> &lt;RAINFALL&gt; ///
-</div>
-
-<div class="work" onclick="openWork(6)">
-<span class="number">06 —</span> &lt;THE WEIGHT OF DIMENSIONS&gt; ///
-</div>
-
-<div class="work" onclick="openWork(7)">
-<span class="number">07 —</span> &lt;RAISING FISH&gt; ///
-</div>
-
-<div class="work" onclick="openWork(8)">
-<span class="number">08 —</span> &lt;THE HILL&gt; ///
-</div>
-
-<div class="work" onclick="openWork(9)">
-<span class="number">09 —</span> &lt;FUNERAL&gt; ///
-</div>
-
-<div class="work" onclick="openWork(10)">
-<span class="number">10 —</span> &lt;CLIMAX&gt; ///
-</div>
-
-<div class="work" onclick="openWork(11)">
-<span class="number">11 —</span> &lt;LINEAGE&gt; ///
-</div>
-
-<div class="work" onclick="openWork(12)">
-<span class="number">12 —</span> &lt;SCHWEIGEN&gt; ///
-</div>
-
-<div class="work" onclick="openWork(13)">
-<span class="number">13 —</span> &lt;SLEEP&gt; ///
-</div>
-
-<div class="work" onclick="openWork(14)">
-<span class="number">14 —</span> &lt;ROUND TABLE CONFERENCE&gt; ///
-</div>
-
-<div class="work" onclick="openWork(15)">
-<span class="number">15 —</span> &lt;BARRIER-FREE PATH&gt; ///
-</div>
-
-<div class="work" onclick="openWork(16)">
-<span class="number">16 —</span> &lt;DAS HOLZ&gt; ///
-</div>
-
-<div class="work" onclick="openWork(17)">
-<span class="number">17 —</span> &lt;TOOTHBRUSH&gt; ///
-</div>
-
-<div class="work" onclick="openWork(18)">
-<span class="number">18 —</span> &lt;DANCING&gt; ///
-</div>
+<div class="work" onclick="openWork(5)">05 — &lt;RAINFALL&gt;\\\</div>
+<div class="work" onclick="openWork(6)">06 — &lt;THE WEIGHT OF DIMENSIONS&gt;\\\</div>
+<div class="work" onclick="openWork(7)">07 — &lt;RAISING FISH&gt;\\\</div>
+<div class="work" onclick="openWork(8)">08 — &lt;THE HILL&gt;///</div>
+<div class="work" onclick="openWork(9)">09 — &lt;FUNERAL&gt;\\\</div>
+<div class="work" onclick="openWork(10)">10 — &lt;CLIMAX&gt;\\\</div>
+<div class="work" onclick="openWork(11)">11 — &lt;LINEAGE&gt;///</div>
+<div class="work" onclick="openWork(12)">12 — &lt;SCHWEIGEN&gt;\\\</div>
+<div class="work" onclick="openWork(13)">13 — &lt;SLEEP&gt;\\\</div>
+<div class="work" onclick="openWork(14)">14 — &lt;ROUND TABLE CONFERENCE&gt;///</div>
+<div class="work" onclick="openWork(15)">15 — &lt;BARRIER-FREE PATH&gt;///</div>
+<div class="work" onclick="openWork(16)">16 — &lt;DAS HOLZ&gt;///</div>
+<div class="work" onclick="openWork(17)">17 — &lt;TOOTHBRUSH&gt;///</div>
+<div class="work" onclick="openWork(18)">18 — &lt;DANCING&gt;\\\</div>
 
 <div class="footer">
-ALL RIGHTS REVERSED — E. White 2026
+ALL RIGHTS REVERSED — <span onclick="openAbout()">E. White</span> 2026
 </div>
 
 </div>
+
 
 
 
@@ -221,9 +123,9 @@ ALL RIGHTS REVERSED — E. White 2026
 </div>
 
 </div>
+  
 
-
-
+  
 <div class="about" id="about">
 
 <b>Siyuan Li / E. White</b><br>
@@ -246,7 +148,6 @@ FUNCTIONING<br>
 OBSERVING<br>
 NOT COMPLYING<br><br>
 
-There aren't that many things here. If you don't want what I have, get out.
 
 </div>
 
@@ -255,89 +156,354 @@ There aren't that many things here. If you don't want what I have, get out.
 <script>
 
 let works={
+
 1:{
-title:"WALKING THE DOG",
-year:"(2023) Video",
+title:"Walking the Dog (2023) Video",
 images:["images/01-1.jpeg","images/01-2.jpeg","images/01-3.jpeg"],
-text:`完整文本...`
+text:`A “dog”
+made of a handcart,
+a loudspeaker,
+and a collar.
+
+When I turn on the speaker,
+my “dog”
+barks without end.
+
+The pack always answers in chorus.
+
+In this absurd theater,
+they keep trying
+to interact
+with a stranger of their own kind.`
 },
 
 2:{
-title:"THE GREAT PAIN UNDER HEAVEN",
-year:"(2025) Video",
+title:"The Great Pain Under Heaven (2025) Video",
 images:["images/02-1.jpeg","images/02-2.jpeg","images/02-3.jpeg"],
-text:`完整文本...`
+text:`This work is a stop-motion animation based on a physical performance I created with my own body. Its title, “The Great Pain Under Heaven”, is a wordplay on a well-known phrase from classical Chinese philosophy: “The Great Harmony Under Heaven” (tian xia da tong / 天 下大同). That original phrase envisions an ideal society with equality, justice, no class division, and no private desire — a collective utopia from the Confucian canon Book of Rites.
+
+By replacing just one character — turning 同 (togetherness) into 痛 (pain) — the meaning shifts completely. “The Great Harmony” becomes “The Great Pain.” This subtle change reflects the dissonance I feel between cultural ideals and lived reality: we appear to live in a peaceful, developed world, but beneath the surface, structural pain — war, injustice, anxiety, oppression — quietly persists. It is not dramatic or explosive pain, but constant, suppressed,  and everywhere.
+
+
+
+
+In Chinese education, we are taught to write using a standard structure called the Tian Zi Ge (田字格), a four-part grid that disciplines the shape of each character. It represents cultural order and control — beginning in childhood.
+
+
+In this piece, I used my own body to recreate that grid: the crease between my thighs and buttocks forming a cross-like structure. Onto this fragile, flesh-made “writing field,” I used whip-like strikes to “write” four characters: 天下大痛 — The Great Pain Under Heaven.
+
+Rather than filming this act in real time, I chose to present it as a stop-motion animation.
+
+This was a deliberate decision. Stop-motion divides time into rigid frames, turning pain into measurable, repeatable, visible units. Each frame isolates a moment of tension. The animation format makes the violence appear rhythmic, even mechanical — echoing the way that systems of discipline operate: step by step, rule by rule, wound by wound.
+
+At the same time, because the body is real — because it is my own body — the reactions remain personal and visceral. The pain is not abstract. My groaning, my twisting, my involuntary movements are all part of the writing process. As the animation continues, the "grid" begins to collapse. The characters distort.
+
+Language itself breaks down under pressure.
+
+Through this work, I wanted to explore how culture, regulation, and suffering are entangled — and how pain, even quiet pain, eventually deforms the structures that try to contain it.`
+},
+
+3:{
+title:"Kowtow (2024) Video",
+images:["images/03.jpeg"],
+text:`Through a motion-sensor light and my own gestures of devotion, I constructed a ritualistic performance.
+
+Kneeling before the light, I kowtowed; each bow triggered a brief flicker.
+
+
+This ritualized action mirrors humanity’s pursuit of light and belief.
+
+Yet my devotion, ultimately futile, could only exchange itself for a momentary flash of artificial illumination.
+
+In China, people will kowtow to pray for the gods' blessing. Inspired[ɪnˈspaɪəd] by this, I kowtowed to an induction lamp, which only turned on when my head fell on floor, and my prayer only give me a moment of hope, and it was only artificial hope. I’m a atheist. In my opinion, these prays only have hope in that moment, and that hope is also self-comforting, a moment to exist and a moment to disappear.
+
+Use unknow to defeat unknow.`
+},
+
+4:{
+title:"The Physical Impossibility of Death in the Mind of Someone Living (Low-Budget Version) (2023)",
+images:["images/04-1.jpeg","images/04-2.jpeg","images/04-3.jpeg"],
+text:`In this work, I recreated Damien Hirst’s iconic piece The Physical Impossibility of Death in the Mind of Someone Living.
+
+
+During the process of replication, I printed an image of a shark, cut it out, and attached it to an old television set. Due to a malfunction, the television can only display a blue screen; this technical failure became the starting point of the work.
+
+
+Whenever I look at this old television, my thoughts begin to wander. The hollow blue makes me feel that it has lost its “soul” as a television. Watching it feels like looking at a dead body. This sensation led me back to The Physical Impossibility of Death in the Mind of Someone Living.
+
+
+
+
+
+
+
+In my version, there is no real shark body. The corpse does not exist. It appears only as a printed image — a cheap, flat substitute. The work shifts from physical presence to digital representation. What used to be a heavy biological object becomes a lightweight image.
+
+
+
+The blue screen of the broken television emphasizes this shift. It is a sign of malfunction, but also a sign of mediation. The viewer is not facing death itself, but a failed display of it. The work therefore reflects on media: how images replace reality, how technology becomes the new container for meaning.
+
+
+
+The low-budget production is intentional. It reduces spectacle and removes the aura of luxury associated with the original work. By using ordinary materials and a broken device, the piece questions how value is constructed in contemporary art. If the shark becomes only an image, what exactly are we looking at? And what are we paying for?`
+},
+
+5:{
+title:"Rainfall (2023) Video",
+images:["images/05-1.jpeg","images/05-2.jpeg","images/05-3.jpeg"],
+text:`Dripping wax fire accompanies the passing of time and the disappearance of life, while the protective umbrella loses its function within this instability.
+
+If this society changes, the protective umbrella will likewise stand there without protection.`
+},
+
+6:{
+title:"The Weight of Dimensions (2024) Video",
+images:["images/06-1.jpeg","images/06-2.jpeg","images/06-3.jpeg","images/06-4.jpeg","images/06-5.jpeg"],
+text:`In THE WEIGHT OF DIMENSIONS, I attach tape to the ground, starting from my front door and moving toward the gate of the yard. As I move forward, my partner follows behind me and tears the tape off. I continue sticking it down; he continues removing it. The action repeats until there is no distance left between the two points.
+
+
+
+
+Nothing remains on the ground. All the tape that has been removed is gathered and compressed into a single ball.
+
+
+
+This ball is the only physical result of the work. It contains the entire process — the walking, the sticking, the tearing, the distance between two doors, the time it took, the effort involved. What was once stretched across space is reduced into a compact mass.
+
+
+
+
+The tape ball represents the accumulated weight of everything that occurred during the action. Space was measured and erased at the same time. Time was spent but left no visible trace. What remains is a condensed object — a physical compression of duration, distance, and interaction.`
+},
+
+7:{
+title:"Raising Fish (2023) Video",
+images:["images/07-1.jpeg","images/07-2.jpeg","images/07-3.jpeg","images/07-4.jpeg"],
+text:`I placed paper fish in an aquarium, granting them the concept of a temporary life.
+
+As they remained immersed in water, the paper fish gradually sank, mirroring the posture of fish in death.
+
+The entire process lasted 107 hours, 46 minutes, and 23 seconds, marking the span of their lives—from the moment life was assigned to them until it fully dissolved.
+
+
+
+
+When all of them had finally sunk to the bottom, I felt a profound sense of sorrow. As my children, they had died.`
+},
+
+8:{
+title:"The Hill (2023) Installation",
+images:["images/08-1.jpeg","images/08-2.jpeg","images/08-3.jpeg"],
+text:`Hotel beds, two wooden armchairs, blankets
+
+Two beds gaze at each other from afar.
+
+Upon them, silence lies prone —
+
+a hill that rose from the earth
+
+hundreds of millions of years ago,
+
+yet, drifting with the tectonic plates,
+
+can no longer be stitched back together.`
+},
+
+9:{
+title:"Funeral (2024) Video",
+images:["images/09-1.jpeg","images/09-2.jpeg"],
+text:`I selected twelve paintings by Caravaggio that contain images of dead bodies.
+
+I printed them and carefully cut out the figures of the corpses.
+
+
+In traditional Chinese belief, after a person dies, the body should be cremated and buried so that the soul may find peace.
+
+Following this logic, I burned the cut-out bodies and placed the ashes into an urn, which I then buried.
+
+
+
+For centuries, these dead souls had been confined within the paintings.
+
+Now, I wish for them to finally rest in peace.`
+},
+
+10:{
+title:"Climax (2023) Video / Installation",
+images:["images/10-1.jpeg","images/10-2.jpeg","images/10-3.jpeg","images/10-4.jpeg"],
+text:`The power strip is the center of centralized control.
+
+The glue gun, granted its current, becomes like an organ at climax,
+
+dripping thick bodily fluid.`
+},
+
+11:{
+title:"Lineage (2023) Installation",
+images:["images/11-1.jpeg","images/11-2.jpeg"],
+text:`The branches of bloodline
+
+are like a fir tree,
+
+extending outward
+
+into a tangled genealogy.
+
+
+
+
+
+The winding lines
+
+are intersections of kinship,
+
+marks of life
+
+that cannot be washed away.`
+},
+
+12:{
+title:"Schweigen (2025) Video",
+images:["images/12.jpeg"],
+text:`In SCHWEIGEN, I stand in the street and write a single sentence in a notebook. I tear the page out, crumple it into a ball, and throw it hard onto the ground. My gestures are exaggerated, almost theatrical, as if I expect the action to carry weight.
+
+
+
+
+But nothing happens.
+
+
+
+
+The paper hits the ground without sound. It falls weakly. The force of the gesture produces no impact. What remains is silence.`
+},
+
+13:{
+title:"Sleep (2023) Video",
+images:["images/13-1.jpeg","images/13-2.jpeg","images/13-3.jpeg"],
+text:`Because of my poor mental state, my sleep quality is not good, I always turn over and over when I sleep, and sometimes I even wake up when I move too much. 
+
+
+To record this, I put a cup on the table next to my bed. The cup sits on the edge of the table, symbolizing my impending breakdown. 
+
+
+
+
+Then while I was sleeping, about thirty minutes I rolled over and hit the table, then the cup fell on the floor and woke me up. My bad sleep ended in a crash.`
+},
+
+14:{
+title:"Round Table Conference (2023) Installation",
+images:["images/14-1.jpeg","images/14-2.jpeg","images/14-3.jpeg"],
+text:`When power is bound together
+
+around a round table,
+
+a structure that appears equal
+
+requires force pressed into flesh to maintain balance.
+
+
+The key is the solution,
+
+and also the beginning of the problem.`
+},
+
+15:{
+title:"Barrier-Free Path (2024) Installation",
+images:["images/15-1.jpeg","images/15-2.jpeg"],
+text:`In Barrier-Free Path, I attempt to express the concept of a “barrier-free path” in a particular way. I covered a staircase with adhesive tape, creating a spot that appears comfortable and easy to walk across, but is in fact dangerous.
+
+
+
+
+In reality, this passage is not walkable; it functions more like a trap. The surface formed by the tape is hollow and cannot support the weight of a human body. If someone were to step onto it, it would collapse.`
+},
+
+16:{
+title:"Das Holz (2024) Installation",
+images:["images/16-1.jpeg","images/16-2.jpeg","images/16-3.jpeg"],
+text:`A kind of flowing
+that freezes time.`
+},
+
+17:{
+title:"Toothbrush (2024) Installation",
+images:["images/17-1.jpeg","images/17-2.jpeg","images/17-3.jpeg"],
+text:`While brushing my teeth,
+
+foam and saliva
+
+flow out of my mouth.
+
+
+
+
+Along the toothbrush,
+
+little by little,
+
+they drip down.`
+},
+
+18:{
+title:"Dancing (2024) Video",
+images:["images/18.jpeg"],
+text:`Let's dance along with the wind.`
 }
 
-}
+};
 
-let slideIndex=0
-let timer
-let current
+
+
+let slideIndex=0;
+let timer;
 
 function openWork(id){
 
-current=works[id]
+let work=works[id];
 
-document.getElementById("overlay").style.display="block"
+document.getElementById("overlay").style.display="block";
 
-document.getElementById("metaTitle").innerText=current.title
-document.getElementById("metaYear").innerText=current.year
-document.getElementById("text").innerText=current.text
+document.getElementById("title").innerText=work.title;
 
-slideIndex=0
+document.getElementById("text").innerText=work.text;
 
-showSlide()
+slideIndex=0;
+
+showSlide(work);
 
 timer=setInterval(()=>{
-slideIndex++
-if(slideIndex>=current.images.length){slideIndex=0}
-showSlide()
-},3000)
+
+slideIndex++;
+
+if(slideIndex>=work.images.length){
+
+slideIndex=0;
 
 }
 
-function showSlide(){
+showSlide(work);
 
-document.getElementById("slide").src=current.images[slideIndex]
+},3000);
+
+}
+
+function showSlide(work){
+
+document.getElementById("slide").src=work.images[slideIndex];
 
 }
 
 function closeWork(){
 
-document.getElementById("overlay").style.display="none"
-document.getElementById("text").style.display="none"
+document.getElementById("overlay").style.display="none";
 
-clearInterval(timer)
-
-}
-
-function toggleText(){
-
-let t=document.getElementById("text")
-
-if(t.style.display==="none"){
-t.style.display="block"
-}else{
-t.style.display="none"
-}
-
-}
-
-function openAbout(){
-
-let a=document.getElementById("about")
-
-if(a.style.display==="block"){
-a.style.display="none"
-}else{
-a.style.display="block"
-}
+clearInterval(timer);
 
 }
 
 </script>
-
 
 </body>
 </html>
