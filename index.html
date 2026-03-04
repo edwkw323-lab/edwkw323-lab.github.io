@@ -70,8 +70,8 @@ justify-content:center;
 }
 
 .left img{
-max-width:80%;
-max-height:80%;
+width:90%;
+height:auto;
 }
 
 .right{
@@ -79,6 +79,8 @@ width:50%;
 padding:80px;
 overflow:auto;
 line-height:1.6;
+background:#111;
+display:none;
 }
 
 .close{
@@ -570,6 +572,7 @@ document.getElementById("overlay").style.display="block"
 document.getElementById("metaTitle").innerText=current.title
 document.getElementById("metaYear").innerText=current.year
 document.getElementById("text").innerText=current.text
+document.getElementById("text").style.display="none"
 
 slideIndex=0
 
@@ -592,7 +595,8 @@ document.getElementById("slide").src=current.images[slideIndex]
 function closeWork(){
 
 document.getElementById("overlay").style.display="none"
-document.getElementById("text").style.display="none"
+
+document.querySelector(".right").style.display="none"
 
 clearInterval(timer)
 
@@ -601,11 +605,12 @@ clearInterval(timer)
 function toggleText(){
 
 let t=document.getElementById("text")
+let panel=document.querySelector(".right")
 
-if(t.style.display==="none"){
-t.style.display="block"
+if(panel.style.display==="none"){
+panel.style.display="block"
 }else{
-t.style.display="none"
+panel.style.display="none"
 }
 
 }
