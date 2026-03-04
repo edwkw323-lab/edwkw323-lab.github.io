@@ -1,80 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>E. WHITE</title>
+<meta charset="utf-8">
+<title>E. White</title>
 
 <style>
-html, body {
-    margin: 0;
-    height: 100%;
-    font-family: Helvetica, Arial, sans-serif;
-    background: #1c00ff;
-    color: #d9d9ff;
+
+body{
+margin:0;
+background:#0a0aff;
+font-family:Helvetica, Arial, sans-serif;
+color:white;
 }
 
-/* 首页容器 */
-.content {
-    padding: 80px;
+.container{
+padding:80px;
 }
 
-/* 巨型标题 */
-h1 {
-  font-size: 90px;
-  font-weight: 900;
-  line-height: 1.02;
-  margin: 0 0 60px 0;
+.title{
+font-size:80px;
+font-weight:bold;
+margin-bottom:60px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* 左图层 */
-.work-panel {
-    position: fixed;
-    top: 0;
-    left: -60%;
-    width: 60%;
-    height: 100%;
-    background: #000;
-    padding: 80px;
-    transition: 0.4s ease;
-    box-sizing: border-box;
-}
-
-.work-panel.active {
-    left: 0;
-}
-
-.work-panel img {
-    max-width: 100%;
-}
-
-/* 右文字层 */
-.text-panel {
-    position: fixed;
-    top: 0;
-    right: -40%;
-    width: 40%;
-    height: 100%;
-    background: #111;
-    padding: 80px;
-    transition: 0.4s ease;
-    box-sizing: border-box;
-    color: white;
-}
-
-.text-panel.active {
-    right: 0;
-}
-
-/* 按钮 */
-.btn {
-    font-size: 14px;
-    cursor: pointer;
-    margin-right: 20px;
+.work{
+font-size:70px;
+font-weight:bold;
+margin:10px 0;
+cursor:pointer;
 }
 
 .footer {
@@ -82,91 +35,274 @@ a {
     font-weight: 900;
     margin-top: 200px;
 }
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:none;
+}
+
+.overlay-content{
+display:flex;
+height:100%;
+}
+
+.left{
+width:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.left img{
+max-width:80%;
+max-height:80%;
+}
+
+.right{
+width:50%;
+padding:80px;
+overflow:auto;
+}
+
+.close{
+position:absolute;
+top:30px;
+right:40px;
+cursor:pointer;
+font-size:20px;
+}
+
 </style>
+
 </head>
+
 
 <body>
 
-<div class="content">
+<div class="container">
 
-<h1 onclick="openWork(1)">01—&lt;WALKING THE DOG&gt;///</h1>
-<h1 onclick="openWork(2)">02—&lt;THE GREAT PAIN UNDER HEAVEN&gt;///</h1>
-<h1 onclick="openWork(3)">03—&lt;KOWTOW&gt;///</h1>
-<h1 onclick="openWork(4)">04—&lt;THE PHYSICAL IMPOSSIBILITY OF DEATH IN THE MIND OF SOMEONE LIVING&gt;///</h1>
-<h1 onclick="openWork(5)">05—&lt;RAINFALL&gt;///</h1>
-<h1 onclick="openWork(6)">06—&lt;THE WEIGHT OF DIMENSIONS&gt;///</h1>
-<h1 onclick="openWork(7)">07—&lt;RAISING FISH&gt;///</h1>
-<h1 onclick="openWork(8)">08—&lt;THE HILL&gt;///</h1>
-<h1 onclick="openWork(9)">09—&lt;FUNERAL&gt;///</h1>
-<h1 onclick="openWork(10)">10—&lt;CLIMAX&gt;///</h1>
-<h1 onclick="openWork(11)">11—&lt;LINEAGE&gt;///</h1>
-<h1 onclick="openWork(12)">12—&lt;SCHWEIGEN&gt;///</h1>
-<h1 onclick="openWork(13)">13—&lt;SLEEP&gt;///</h1>
-<h1 onclick="openWork(14)">14—&lt;ROUND TABLE CONFERENCE&gt;///</h1>
-<h1 onclick="openWork(15)">15—&lt;BARRIER-FREE PATH&gt;///</h1>
-<h1 onclick="openWork(16)">16—&lt;DAS HOLZ&gt;///</h1>
-<h1 onclick="openWork(17)">17—&lt;TOOTHBRUSH&gt;///</h1>
-<h1 onclick="openWork(18)">18—&lt;DANCING&gt;///</h1>
+<div class="title">SIYUAN LI</div>
 
-<div class="footer">
-ALL RIGHTS REVERSED — ‘E. WHITE—2026’
-</div>
+<div class="work" onclick="openWork(1)">01 — WALKING THE DOG</div>
+<div class="work" onclick="openWork(2)">02 — THE GREAT PAIN UNDER HEAVEN</div>
+<div class="work" onclick="openWork(3)">03 — KOWTOW</div>
+<div class="work" onclick="openWork(4)">04 — THE PHYSICAL IMPOSSIBILITY OF DEATH</div>
+<div class="work" onclick="openWork(5)">05 — RAINFALL</div>
+<div class="work" onclick="openWork(6)">06 — THE WEIGHT OF DIMENSIONS</div>
+<div class="work" onclick="openWork(7)">07 — RAISING FISH</div>
+<div class="work" onclick="openWork(8)">08 — THE HILL</div>
+<div class="work" onclick="openWork(9)">09 — FUNERAL</div>
+<div class="work" onclick="openWork(10)">10 — CLIMAX</div>
+<div class="work" onclick="openWork(11)">11 — LINEAGE</div>
+<div class="work" onclick="openWork(12)">12 — SCHWEIGEN</div>
+<div class="work" onclick="openWork(13)">13 — SLEEP</div>
+<div class="work" onclick="openWork(14)">14 — ROUND TABLE CONFERENCE</div>
+<div class="work" onclick="openWork(15)">15 — BARRIER-FREE PATH</div>
+<div class="work" onclick="openWork(16)">16 — DAS HOLZ</div>
+<div class="work" onclick="openWork(17)">17 — TOOTHBRUSH</div>
+<div class="work" onclick="openWork(18)">18 — DANCING</div>
 
-</div>
-
-<!-- 左图层 -->
-<div class="work-panel" id="work1">
-
-<img src="images/08.jpg">
-
-<br><br>
-
-<div>
-<span class="btn" onclick="openText()">More...</span>
-<span class="btn" onclick="closeWork()">Close</span>
-</div>
+<div class="footer">ALL RIGHTS REVERSED — E. White 2026</div>
 
 </div>
 
 
-<!-- 右文字层 -->
-<div class="text-panel" id="text1">
+<div class="overlay" id="overlay">
 
-<h2>The Hill (2023)</h2>
+<div class="close" onclick="closeWork()">Close</div>
 
-<p>
-Two beds gaze at each other from afar.<br><br>
-Upon them, silence lies prone —<br>
-a hill that rose from the earth<br>
-hundreds of millions of years ago,<br>
-yet drifting with the tectonic plates,<br>
-can no longer be stitched back together.
-</p>
+<div class="overlay-content">
 
-<br><br>
+<div class="left">
+<img id="slide">
+</div>
 
-<span class="btn" onclick="closeText()">Close</span>
+<div class="right">
+<h2 id="workTitle"></h2>
+<div id="workText"></div>
+</div>
 
 </div>
+</div>
+
 
 
 <script>
-function openWork(n) {
-    document.getElementById("work" + n).classList.add("active");
+
+let works = {
+
+1:{
+title:"WALKING THE DOG (2023) Video",
+images:["images/01-1.jpeg","images/01-2.jpeg","images/01-3.jpeg"],
+text:`A “dog” made of a handcart, a loudspeaker, and a collar.
+
+When I turn on the speaker, my “dog” barks without end.
+
+The pack always answers in chorus.
+
+In this absurd theater, they keep trying to interact with a stranger of their own kind.`
+},
+
+2:{
+title:"THE GREAT PAIN UNDER HEAVEN (2025) Video",
+images:["images/02-1.jpeg","images/02-2.jpeg","images/02-3.jpeg"],
+text:`This work is a stop-motion animation based on a physical performance with my own body.
+
+By replacing one character in the phrase “The Great Harmony Under Heaven”, harmony becomes pain.
+
+The work reflects the dissonance between cultural ideals and lived reality.`
+},
+
+3:{
+title:"KOWTOW (2024) Video",
+images:["images/03.jpeg"],
+text:`Through a motion sensor light and my gestures of devotion, I constructed a ritualistic performance.
+
+Each bow triggers a flash of artificial light.`
+},
+
+4:{
+title:"THE PHYSICAL IMPOSSIBILITY OF DEATH (LOW BUDGET VERSION) (2023)",
+images:["images/04-1.jpeg","images/04-2.jpeg","images/04-3.jpeg"],
+text:`A low-budget reinterpretation of Damien Hirst’s work.
+
+A printed shark image attached to a broken television displaying only a blue screen.`
+},
+
+5:{
+title:"RAINFALL (2023) Video",
+images:["images/05-1.jpeg","images/05-2.jpeg","images/05-3.jpeg"],
+text:`Dripping wax fire accompanies the passing of time and disappearance of life.`
+},
+
+6:{
+title:"THE WEIGHT OF DIMENSIONS (2024) Video",
+images:["images/06-1.jpeg","images/06-2.jpeg","images/06-3.jpeg","images/06-4.jpeg","images/06-5.jpeg"],
+text:`Tape is attached from one door to another while another person removes it.
+
+The removed tape becomes a compressed ball containing the entire process.`
+},
+
+7:{
+title:"RAISING FISH (2023) Video",
+images:["images/07-1.jpeg","images/07-2.jpeg","images/07-3.jpeg","images/07-4.jpeg"],
+text:`Paper fish placed in water slowly sink over 107 hours.`
+},
+
+8:{
+title:"THE HILL (2023) Installation",
+images:["images/08-1.jpeg","images/08-2.jpeg","images/08-3.jpeg"],
+text:`Two beds gaze at each other from afar.
+
+Silence lies between them like a geological hill.`
+},
+
+9:{
+title:"FUNERAL (2024) Video",
+images:["images/09-1.jpeg","images/09-2.jpeg"],
+text:`Dead bodies cut from Caravaggio paintings are burned and buried.`
+},
+
+10:{
+title:"CLIMAX (2023) Video / Installation",
+images:["images/10-1.jpeg","images/10-2.jpeg","images/10-3.jpeg","images/10-4.jpeg"],
+text:`Glue gun and power strip create a metaphor of climax.`
+},
+
+11:{
+title:"LINEAGE (2023) Installation",
+images:["images/11-1.jpeg","images/11-2.jpeg"],
+text:`Power strips extend like branches of bloodline.`
+},
+
+12:{
+title:"SCHWEIGEN (2025) Video",
+images:["images/12.jpeg"],
+text:`A theatrical gesture produces no impact. Only silence remains.`
+},
+
+13:{
+title:"SLEEP (2023) Video",
+images:["images/13-1.jpeg","images/13-2.jpeg","images/13-3.jpeg"],
+text:`A cup placed beside the bed falls when I turn over during sleep.`
+},
+
+14:{
+title:"ROUND TABLE CONFERENCE (2023)",
+images:["images/14-1.jpeg","images/14-2.jpeg","images/14-3.jpeg"],
+text:`Power gathered around a round table requires force to maintain balance.`
+},
+
+15:{
+title:"BARRIER-FREE PATH (2024)",
+images:["images/15-1.jpeg","images/15-2.jpeg"],
+text:`Tape covers a staircase creating a deceptive safe path.`
+},
+
+16:{
+title:"DAS HOLZ (2024)",
+images:["images/16-1.jpeg","images/16-2.jpeg","images/16-3.jpeg"],
+text:`A kind of flowing that freezes time.`
+},
+
+17:{
+title:"TOOTHBRUSH (2024)",
+images:["images/17-1.jpeg","images/17-2.jpeg","images/17-3.jpeg"],
+text:`While brushing my teeth, foam and saliva drip down along the toothbrush.`
+},
+
+18:{
+title:"DANCING (2024) Video",
+images:["images/18.jpeg"],
+text:`Let's dance along with the wind!`
 }
 
-function closeWork(n) {
-    document.getElementById("work" + n).classList.remove("active");
-    document.getElementById("text" + n).classList.remove("active");
+};
+
+
+let slideIndex=0;
+let slideTimer;
+
+function openWork(id){
+
+document.getElementById("overlay").style.display="block";
+
+let work=works[id];
+
+document.getElementById("workTitle").innerText=work.title;
+document.getElementById("workText").innerText=work.text;
+
+slideIndex=0;
+
+showSlide(work);
+
+slideTimer=setInterval(()=>{
+slideIndex++;
+if(slideIndex>=work.images.length){slideIndex=0;}
+showSlide(work);
+},3000);
+
 }
 
-function openText(n) {
-    document.getElementById("text" + n).classList.add("active");
+function showSlide(work){
+
+document.getElementById("slide").src=work.images[slideIndex];
+
 }
 
-function closeText(n) {
-    document.getElementById("text" + n).classList.remove("active");
+function closeWork(){
+
+document.getElementById("overlay").style.display="none";
+
+clearInterval(slideTimer);
+
 }
+
 </script>
 
 </body>
