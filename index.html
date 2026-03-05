@@ -117,6 +117,10 @@ background:#111;
 display:none;
 }
 
+#media{
+cursor:pointer;
+}
+
 .close{
 position:absolute;
 top:30px;
@@ -393,7 +397,7 @@ Use unknow to defeat unknow.`
 },
 
 4:{
-title:"The Physical Impossibility of Death in the Mind of Someone Living (Low-Budget Version) (2023) Installation",
+title:"The Physical Impossibility of Death<br>in the Mind of Someone Living<br>(Low-Budget Version) (2023) Installation",
 images:["images/04-1.jpeg","images/04-2.jpeg","images/04-3.jpeg"],
 text:`In this work, I recreated Damien Hirst’s iconic piece The Physical Impossibility of Death in the Mind of Someone Living.
 
@@ -638,7 +642,7 @@ current=works[id]
 
 document.getElementById("overlay").style.display="block"
 
-document.getElementById("metaTitle").innerText=current.title
+document.getElementById("metaTitle").innerHTML=current.title
 document.getElementById("metaYear").innerText=current.year
 document.getElementById("text").innerText=current.text
 document.getElementById("text").style.display="none"
@@ -659,11 +663,12 @@ if(file.includes("youtube") || file.includes("vimeo")){
 
 media.innerHTML = `
 <iframe
-src="${file}?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1"
+src="${file}?autoplay=1&muted=1&controls=1&rel=0&modestbranding=1"
 frameborder="0"
 allow="autoplay; encrypted-media"
 allowfullscreen
-style="width:90%; height:60vh;">
+onclick="nextSlide()"
+style="width:90%; height:80vh;">
 </iframe>
 `
 
@@ -682,7 +687,7 @@ style="max-width:90%;max-height:80vh;">
 
 media.innerHTML = `
 <img src="${file}" 
-onclick="nextSlide()" 
+<div onclick="nextSlide()" style="cursor:pointer;"> 
 style="max-width:90%;max-height:80vh;">
 `
 
@@ -735,6 +740,14 @@ document.getElementById("overlay").style.display="none"
 document.getElementById("media").innerHTML=""
 }
 
+if(event.key === "ArrowRight"){
+nextSlide()
+}
+
+if(event.key === "ArrowLeft"){
+prevSlide()
+}
+
 })
 
 function nextSlide(){
@@ -743,6 +756,14 @@ slideIndex++
 
 if(slideIndex>=current.images.length){
 slideIndex=0
+}
+
+function prevSlide(){
+
+slideIndex--
+
+if(slideIndex<0){
+slideIndex=current.images.length-1
 }
 
 showSlide()
