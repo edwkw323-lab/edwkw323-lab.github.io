@@ -687,8 +687,8 @@ style="max-width:90%;max-height:80vh;">
 
 media.innerHTML = `
 <img src="${file}" 
-<div onclick="nextSlide()" style="cursor:pointer;"> 
-style="max-width:90%;max-height:80vh;">
+onclick="nextSlide()"
+style="max-width:90%;max-height:80vh;cursor:pointer;">
 `
 
 }
@@ -756,6 +756,10 @@ slideIndex++
 
 if(slideIndex>=current.images.length){
 slideIndex=0
+}
+
+showSlide()
+
 }
 
 function prevSlide(){
